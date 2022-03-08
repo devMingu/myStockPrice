@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Noto+Sans+KR:wght@700&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/show.css">
+    <title>ShowPage</title>
+</head>
+<body>
+    <section class="showContainer">
+        <section class="container">
+            <div>
+                <div class="title1">오늘 <span class="name"><%= data.title %></span></div>
+                <div class="title2">얼마나 올랐을까?</div>
+            </div>
+    
+            <h1 class="title"><%= data.title %></h1>
+            <h3 class="price"><%= data.price %></h3>
+    
+            <form method="POST" action="/stock/<%= data._id %>?_method=DELETE">
+                <span class="del_title">관심종목에서 지워주세요</span> 
+                <button>지우기</button>
+            </form>
+    
+            <a href="/stock">홈으로</a>
+            <a href="/stock/<%= data._id %>/edit">수정하기</a>
+        </section>    
+    </section>
+
+
+    <script src="/JS/show.js"></script>
+</body>
+</html>

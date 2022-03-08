@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Noto+Sans+KR:wght@700&family=Rubik&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/CSS/stock.css">
+    <title>STOCK</title>
+</head>
+<body>
+    <section class="stock_top">
+        <section class="stock_container">
+            <div class="title_container">
+                <h1 class="todayPrice">지금 확인해보세요</h1>
+                <div class="subTitle">
+                    오늘의 주식
+                </div>
+            </div>
+            
+            <div class="view">
+                <%for(let el of data){%>
+                    <div class="titleSize"><a href="/stock/<%= el._id %>"><span class="title"><%= el.title %></span></a></div>
+                <%}%>
+            </div>
+        </section>
+        <section class="animation_logo">
+            <img class="logo_samsung"src="http://res.heraldm.com/content/image/2015/06/10/20150610000665_0.jpg" alt="">
+            <img class="logo_kakao" src="https://blog.kakaocdn.net/dn/Sq4OD/btqzlkr13eD/dYwFnscXEA6YIOHckdPDDk/img.jpg" alt="">
+            <img class="logo_naver" src="https://blog.kakaocdn.net/dn/czMTX6/btqNbvGUwIu/xxqSeZd4eRMvTHqbfIZUd0/img.png" alt="">
+            <img  class="logo_hyundai" src="https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F9997644C5AF2495809" alt="">
+        </section>
+    </section>
+
+    <script src="/JS/stock.js"></script>
+</body>
+</html>
