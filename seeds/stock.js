@@ -1,43 +1,43 @@
 module.exports = [
     {
-        name:'삼성전자',
-        price:"70,100",
+        name:'비트코인',
+        symbol:"BTC",
     },
     {
-        name:'카카오',
-        price:"91,600",
+        name:'이더리움',
+        symbol:"ETH",
     },
     {
-        name:'NAVER',
-        price:"307,000",
+        name:'솔라나',
+        symbol:"SOL",
     },
     {
-        name:'셀트리온',
-        price:"165,000",
+        name:'샌드박스',
+        symbol:"SAND",
     },
     {
-        name:'SK하이닉스',
-        price:"119,500",
+        name:'리플',
+        symbol:"XRP",
     },
     {
-        name:'삼성바이오로직스',
-        price:"764,000",
+        name:'디센트럴랜드',
+        symbol:"MANA",
     },
     {
-        name:'삼성SDI',
-        price:"511,000",
+        name:'플로우',
+        symbol:"FLOW",
     },
     {
-        name:'DL이앤씨우',
-        price:"68,600",
+        name:'체인링크',
+        symbol:"LINK",
     },
     {
-        name:'비에이치',
-        price:"19,300",
+        name:'엔진코인',
+        symbol:"ENJ",
     },
     {
-        name:'현대차',
-        price:"168,000",
+        name:'메디블록',
+        symbol:"MED",
     },
 ]
 

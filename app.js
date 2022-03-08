@@ -31,7 +31,7 @@ app.get('/stock/new', (req, res)=>{
     res.render("stockmarket/new");
 })
 app.post('/stock', async (req, res)=>{
-    const data = await new Stock({...req.body.campground});
+    const data = await new Stock({...req.body.stock});
     await data.save();
     res.redirect(`/stockmarket/${data._id}`);
 })
@@ -47,7 +47,7 @@ app.get('/stock/:id/edit', async (req, res)=>{
 })
 app.patch('/stock/:id', async (req, res)=>{
     const {id} = req.params;
-    const data = await Stock.findByIdAndUpdate(id, {...req.body.campground});
+    const data = await Stock.findByIdAndUpdate(id, {...req.body.stock});
     res.redirect(`/stockmarket/${data._id}`);
 })
 app.delete('/stock/:id', async (req, res)=>{

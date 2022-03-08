@@ -12,23 +12,49 @@
 </head>
 <body>
     <section class="showContainer">
-        <section class="container">
-            <div>
-                <div class="title1">오늘 <span class="name"><%= data.title %></span></div>
-                <div class="title2">얼마나 올랐을까?</div>
-            </div>
+        <section class="topContainer">
+            <section class="container">
+                <div>
+                    <div class="title1">오늘 <span class="name"><%= data.title %></span></div>
+                    <div class="title2">얼마나 올랐을까?</div>
+                </div>
+        
+                <span class="title"><%= data.symbol %></span>
+                <h3 class="price">클릭하면 시세가 보여요!</h3>
+        
+                <form method="POST" action="/stock/<%= data._id %>?_method=DELETE">
+                    <span class="del_title">관심종목에서 지워주세요</span> 
+                    <button>지우기</button>
+                </form>
+        
+                <a href="/stock">홈으로</a>
+                <a href="/stock/<%= data._id %>/edit">수정하기</a>
+            </section> 
     
-            <h1 class="title"><%= data.title %></h1>
-            <h3 class="price"><%= data.price %></h3>
-    
-            <form method="POST" action="/stock/<%= data._id %>?_method=DELETE">
-                <span class="del_title">관심종목에서 지워주세요</span> 
-                <button>지우기</button>
-            </form>
-    
-            <a href="/stock">홈으로</a>
-            <a href="/stock/<%= data._id %>/edit">수정하기</a>
-        </section>    
+            <section class="detailContainer hidden">
+                <div class="dePrice">
+                    24시간 기준 오프닝 가격
+                    <span class="openingPrice"></span>
+                </div>
+                <div class="dePrice">
+                    24시간 기준 최저 가격
+                    <span class="lowPrice"></span>
+                </div>
+                <div class="dePrice">
+                    24시간 기준 최고 가격
+                    <span class="highPrice"></span>
+                </div>
+                <div class="dePrice">
+                    현재 변동폭
+                    <span class="changePrice"></span>
+                </div>
+                <div class="dePrice">
+                    그래서 24시간 기준 올라가 내려가?
+                    <span class="riseOrSink"></span>
+                </div>
+            </section>    
+        </section>
+        
     </section>
 
 

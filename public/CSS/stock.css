@@ -7,11 +7,12 @@ a{
     color:rgb(0, 0, 0);
 }
 img{
-    width:100px;
-    height:100px;
+    width:50px;
+    height:50px;
     border-radius: 50%;
     border: 5px solid black;
 }
+
 .stock_top{
     display:flex;
     flex-direction: column;
@@ -59,33 +60,33 @@ img{
     height:500px;
     /* background-color: grey; */
 }
-.logo_samsung{
+.logo_btc{
     position:relative;
     margin:10px;
-    animation: samsungLogo 5s infinite alternate;
+    animation: btcLogo 5s infinite alternate;
     animation-timing-function: ease-in-out;
 }
-.logo_kakao{
+.logo_eth{
     position:relative;
     margin:10px;
-    animation: kakaoLogo 7s infinite alternate;
+    animation: ethLogo 7s infinite alternate;
     animation-timing-function: ease-in-out;
 }
-.logo_naver{
+.logo_flow{
     position:relative;
     margin:10px;
-    animation: naverLogo 3s infinite alternate;
+    animation: flowLogo 3s infinite alternate;
     animation-timing-function: ease-in-out;
 }
-.logo_hyundai{
+.logo_mana{
     position:relative;
     margin:10px;
-    animation: hyundaiLogo 9s infinite alternate;
+    animation: manaLogo 9s infinite alternate;
     animation-timing-function: ease-in-out;
 }
 
 
-@keyframes samsungLogo{
+@keyframes btcLogo{
     from{
         left: 10%;
     }
@@ -93,7 +94,7 @@ img{
         left: 90%;
     }
 }
-@keyframes kakaoLogo{
+@keyframes ethLogo{
     from{
         left: 5%;
     }
@@ -101,7 +102,7 @@ img{
         left: 90%;
     }
 }
-@keyframes naverLogo{
+@keyframes flowLogo{
     from{
         left: 3%;
     }
@@ -109,7 +110,7 @@ img{
         left: 90%;
     }
 }
-@keyframes hyundaiLogo{
+@keyframes manaLogo{
     from{
         left: 2%;
     }
