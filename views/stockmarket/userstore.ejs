@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Noto+Sans+KR:wght@700&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/USER/userstore.css">
+    <title>Save User</title>
+</head>
+<body>
+    <section class="container">
+        <h1>당신의 정보를 기억할게요</h1>
+
+        <form method="POST" action="/stock/store">
+            <div class="mg">
+                <label for="name">사용자 별명</label>
+                <input name="cal[name]" id="name" type="text" placeholder="세종대 핵주먹" required>
+            </div>
+            <div class="mg">
+                <label for="image">사용자 프로필 사진</label>
+                <input name="cal[image]" id="image" type="text" placeholder="이미지 주소를 넣어주세요" required>
+            </div>
+            <div class="mg">
+                <label for="symbol">보유 코인 심볼</label>
+                <input name="cal[symbol]" id="symbol" type="text" placeholder="BTC" required>
+            </div>
+            <div class="mg">
+                <label for="totalprice">총 구매 비용</label>
+                <input name="cal[totalPrice]" id="totalprice" type="text" placeholder="72000000" required>
+            </div>
+            <div class="mg">
+                <label for="count">코인 보유량</label>
+                <input name="cal[coinCount]" id="count" type="text" placeholder="2" required>
+            </div>
+            <button>내 정보 저장하기</button>
+        </form>
+    </section>
+</body>
+</html>

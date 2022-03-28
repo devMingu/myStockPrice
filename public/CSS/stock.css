@@ -11,6 +11,7 @@ img{
     height:50px;
     border-radius: 50%;
     border: 5px solid black;
+    transition: all 1s ease-in-out;
 }
 
 .stock_top{
@@ -29,9 +30,11 @@ img{
     font-size: 100px;
     font-family: 'Noto Sans KR';
     font-weight: 300;
+    transition: all 1s ease-in-out;
 }
 .titleSize{
     font-size: 50px;
+    transition: all 1s ease-in-out;
 }
 .todayPrice{
     font-size: 100px;
@@ -39,6 +42,7 @@ img{
     margin:0;
     font-family: 'Noto Sans KR';
     font-weight: 300;
+    transition: all 1s ease-in-out;
 }
 .view{
     display:flex;
@@ -48,16 +52,25 @@ img{
     margin:10px;
 }
 .title:hover{
-    color:rgb(163, 163, 163);
+    color: white;
+    /* color:rgb(163, 163, 163); */
     transition: all 0.5s ease-in-out;
 }
-
+.footer{
+    display:flex;
+    font-size: 50px;
+    font-family: 'Noto Sans KR';
+    transition: all 1s ease-in-out;
+}
+.footer div{
+    margin:10px;
+}
 
 .animation_logo{
     display:flex;
     flex-direction: column;
     width:100%;
-    height:500px;
+    /* height:500px; */
     /* background-color: grey; */
 }
 .logo_btc{
@@ -83,6 +96,37 @@ img{
     margin:10px;
     animation: manaLogo 9s infinite alternate;
     animation-timing-function: ease-in-out;
+}
+
+
+/* 0px ~ 1450px까지 보여질 화면 */
+@media screen and (max-width: 2030px) {
+    body{
+        background-color: cadetblue;
+    }
+    .todayPrice{
+        font-size: 50px;
+        transition: all 1s ease-in-out;
+    }
+    .subTitle{
+        font-size: 50px;
+        transition: all 1s ease-in-out;
+        color:rgb(255, 192, 239);
+    }
+    .titleSize{
+        font-size: 25px;
+        transition: all 1s ease-in-out;
+    }
+    img{
+        width:25px;
+        height:25px;
+        border-radius: 50%;
+        border: 3px solid black;
+        transition: all 1s ease-in-out;
+    }
+    .footer{
+        font-size: 15px;
+    }
 }
 
 

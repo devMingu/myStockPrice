@@ -2,7 +2,8 @@ const express = require('express')
 const app = express()
 const path = require("path");
 const methodoverride = require("method-override");
-const Stock = require("./campgroundmoel/stock");
+// const {Stock, User} = require("./campgroundmoel/stock");
+const {Stock, User} = require("./stockModel/stock");
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost:27017/stock');
 
@@ -26,6 +27,40 @@ app.get('/', (req, res)=>{
 app.get('/stock', async (req, res)=>{
     const data = await Stock.find({})
     res.render("stockmarket/stock", {data});
+})
+
+//user
+app.get('/stock/user', async (req, res)=>{
+    const userData = await User.find({});
+    res.render("stockmarket/user", {userData});
+})
+// 유저 데이터 정보 저장
+app.get('/stock/store', async (req, res)=>{
+    res.render("stockmarket/userstore");
+})
+app.post('/stock/store', async (req, res)=>{
+    const userData = new User(req.body.cal);
+    await userData.save();
+    res.redirect("/stock/user");
+})
+
+app.get('/stock/user/:id', async (req, res)=>{
+    const {id} = req.params;
+    const userData = await User.findById(id);
+    res.render("stockmarket/showuser", {userData});
+})
+app.delete('/stock/user/:id', async(req, res)=>{
+    const {id} = req.params;
+    await User.findByIdAndDelete(id);
+    res.redirect("/stock/user");
+})
+//////////////
+app.get('/stock/cal', (req, res)=>{
+    res.render('stockmarket/averagecal');
+})
+app.post('/stock/cal', (req, res)=>{
+    const userData = req.body.cal;
+    res.render('stockmarket/showcal', {userData});
 })
 app.get('/stock/new', (req, res)=>{
     res.render("stockmarket/new");

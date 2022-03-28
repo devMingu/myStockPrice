@@ -4,6 +4,7 @@ body{
 a{
     text-decoration: none;
 }
+
 .showContainer{
     display:flex;
     justify-content: center;
@@ -34,6 +35,8 @@ a{
     align-items: center;
     justify-content: space-around;
     margin:10px;
+    border: 1px solid grey;
+    border-radius: 10px;
     /* background-color: coral; */
     flex:1;
     animation: hiddenAnimation 1s;
@@ -83,6 +86,38 @@ button:hover{
 .hidden{
     display:none;
     
+}
+
+@media screen and (max-width: 2030px) {
+    .title1{
+        font-size: 50px;    
+    }
+    .title2{
+        font-size: 50px;      
+    }
+    .title{
+        font-size: 50px;
+    }
+    .price{
+        font-size: 50px;
+    }
+    .del_title{
+        font-size: 15px;
+    }
+    .dePrice{
+        font-size: 25px;
+    }
+    .detailContainer{
+        border: 1px solid grey;
+        border-radius: 10px;
+    }
+    button{
+        width:60px;
+        font-size: 15px;
+        border:2px solid black;
+        border-radius: 5%;
+        background:none;
+    }
 }
 
 @keyframes hiddenAnimation{

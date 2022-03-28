@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Noto+Sans+KR:wght@700&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/USER/user.css">
+    <title>모든 유저 정보</title>
+</head>
+<body>
+    <h1>유저들의 정보를 같이 확인해보세요!</h1>
+    
+    <section class="out-container">
+        <%for (user of userData){%>
+            <section class="container">
+                <div class="profile">
+                    <img src="<%= user.image %>" alt="">
+                    <div><a href="/stock/user/<%= user._id %>"><%= user.name %></a></div>
+                </div>
+                <div class="intro">
+                    <span>심볼</span>
+                    <%= user.symbol %>
+                </div>
+                <div class="intro">
+                    <span>보유 금액</span>
+                    <%= user.totalPrice %>원
+                </div>
+                <div class="intro">
+                    <span>보유량</span>
+                    <%= user.coinCount %><%= user.symbol.toLowerCase()%>
+                </div>
+            </section>
+        <%}%>
+    </section>
+    <a href="/stock">홈으로 가기</a>
+</body>
+</html>

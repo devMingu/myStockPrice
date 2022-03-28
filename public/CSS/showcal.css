@@ -1,0 +1,43 @@
+
+a{
+    display:flex;
+    justify-content: center;
+    background: none;
+    border: 2px solid rgb(0, 97, 126);
+    border-radius: 20px;
+    padding:10px;
+    margin-left: 10px;
+    color:black;
+    text-decoration: none;
+    width:70px;
+}
+.notice1{
+    color:red;
+}
+.notice2{
+    color:green;
+}
+.container{
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+
+    font-family: 'Noto Sans KR';
+    font-size: 25px;
+}
+.sub_container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:1080px;
+    /* background-color: cadetblue; */
+}
+.low_container{
+    width:60%;
+    /* background-color: coral; */
+}
+.answer{
+    font-size:50px;
+    color:hotpink;
+}

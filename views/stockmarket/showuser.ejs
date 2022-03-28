@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Noto+Sans+KR:wght@700&family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/USER/showuser.css">
+    <title>USER</title>
+</head>
+<body>
+    <h1><%= userData.name %>님의 정보입니다.</h1>
+    <img src="<%= userData.image %>" alt="">
+    <%= userData.symbol %>
+    <%= userData.totalPrice %>
+    <%= userData.coinCount %>
+
+    <form method="POST" action="/stock/user/<%= userData._id %>?_method=DELETE">
+        <button>
+            내 정보 지우기
+        </button>
+    </form>
+
+    <a href="/stock/user">다른 유저 정보 보러가기</a>
+</body>
+</html>

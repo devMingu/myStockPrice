@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Noto+Sans+KR:wght@700&family=Rubik&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/CSS/averagecal.css">
+    <title>평단가 계산</title>
+</head>
+<body>
+
+    <section class="container">
+        <h1>입력해보세요!</h1>
+
+        <form method="POST" action="/stock/cal">
+            <div class="mg">
+                <label for="symbol">코인 심볼</label>
+                <input name="cal[symbol]" id="symbol" type="text" placeholder="BTC" required>
+            </div>
+            <div class="mg">
+                <label for="totalprice">현재 총 구매 비용</label>
+                <input name="cal[currenttotalprice]" id="totalprice" type="text" placeholder="72000000" required>
+            </div>
+            <div class="mg">
+                <label for="count">현재 코인 보유량</label>
+                <input name="cal[currentcount]" id="count" type="text" placeholder="2" required>
+            </div>
+
+            <div class="mg">
+                <label for="plusprice">추가 총 구매 금액</label>
+                <input name="cal[plusprice]" id="plusprice" type="text" placeholder="72000000" required>
+            </div>
+            <div class="mg">
+                <label for="pluscount">추가 코인 구매량</label>
+                <input name="cal[pluscount]" id="pluscount" type="text" placeholder="2" required>
+            </div>
+            <button>확인하기</button>
+        </form>
+    </section>
+</body>
+</html>

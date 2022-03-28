@@ -1,0 +1,103 @@
+body{
+    /* background-color: burlywood; */
+    margin:0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+img{
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+.out-container{
+    display:flex;
+    justify-content: space-between;
+    flex: 1;
+    flex-wrap: wrap;
+    width:1280px;
+    /* background-color: cornflowerblue; */
+}
+.container{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:48%;
+    height:200px;
+    background-color: cadetblue;
+
+    font-size: 25px;
+    font-family: 'Noto Sans KR';
+
+    margin:10px;
+    border-radius: 10px;
+}
+.profile{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: cornsilk; */
+}
+.profile a{
+    color:rgb(0, 0, 0);
+}
+.intro{
+    display:flex;
+    flex-direction: column;
+    margin:0 10px;
+}
+
+
+@media screen and (max-width: 2030px){
+    body{
+        /* background-color: burlywood; */
+        margin:0;
+        transition: all 1s ease-in-out;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    img{
+        width:50px;
+        height:50px;
+        border-radius: 50%;
+        margin-bottom: 5px;
+    }
+    .out-container{
+        display:flex;
+        justify-content: space-between;
+        flex: 1;
+        flex-wrap: wrap;
+        width:800px;
+        /* background-color: cornflowerblue; */
+    }
+    .container{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        width:45%;
+        height:100px;
+        background-color: cadetblue;
+        font-size: 12px;
+        font-family: 'Noto Sans KR';
+        margin:10px;
+        border-radius: 10px;
+    }
+    .profile{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .intro{
+        display:flex;
+        flex-direction: column;
+        margin:0 10px;
+    }
+}

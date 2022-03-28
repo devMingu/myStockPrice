@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/showcal.css">
+    <title>유저의 평단은</title>
+</head>
+<body>
+    <section class="container">
+        <section class="sub_container">
+            <section class="low_container">
+                <h1>유저의 평단은?</h1>
+                <h2><%= userData.symbol %>를 가지고 계시는 군요!</h2>
+                <h2>기존에 <span class="notice1 currentprice"><%= userData.currenttotalprice %></span>KRW 만큼 있었고</h2>
+                <h2>그리고 기존에 <span class="notice1 currentcount"><%= userData.currentcount %><%=userData.symbol.toLowerCase() %></span>만큼 가지고 있고</h2>
+                
+                <h2><span class="notice2 plusprice"><%= userData.plusprice %></span>KRW 만큼 추가 구매 하셨군요!!</h2>
+                <h2>그리고 <span class="notice2 pluscount"><%= userData.pluscount %><%=userData.symbol.toLowerCase() %></span> 만큼 추가로 가지고 있으니까</h2>
+                <h2>음 어디 한번 계산해볼께요</h2>
+
+                <div class="answer"></div>
+            </section>
+            
+            <a href="/stock">홈으로</a>
+            <a href="/stock/user">다른 유저들은 얼마일까?</a>
+        </section>
+    </section>
+
+    
+    <script src="/JS/showcal.js"></script>
+</body>
+</html>
